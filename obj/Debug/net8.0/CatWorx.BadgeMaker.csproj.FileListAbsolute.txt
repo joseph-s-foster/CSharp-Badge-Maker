@@ -34,3 +34,4 @@ C:\Users\josep\C#\CSharp-Badge-Maker\bin\Debug\net8.0\runtimes\win-x64\native\li
 C:\Users\josep\C#\CSharp-Badge-Maker\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Users\josep\C#\CSharp-Badge-Maker\obj\Debug\net8.0\CatWorx.BadgeMaker.csproj.AssemblyReference.cache
 C:\Users\josep\C#\CSharp-Badge-Maker\obj\Debug\net8.0\CatWorx.BadgeMaker.csproj.CopyComplete
+C:\Users\josep\C#\CSharp-Badge-Maker\bin\Debug\net8.0\Newtonsoft.Json.dll
