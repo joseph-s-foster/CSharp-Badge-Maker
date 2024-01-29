@@ -4,7 +4,7 @@
 
 ## Description
 
-A C# application that generates employee badges with employee name and ID number.
+A C# application that automatically (via API request) and manually (user input) generates employee badges with first name, last name, photo URL, and employee ID number.
 
   ## Table of Contents
 
@@ -19,6 +19,8 @@ A C# application that generates employee badges with employee name and ID number
   - .Net CORE SDK
   - SkiaSharp
   - NewtonSoft.Json
+  - System.IO
+  - HttpClient
   - Place Kitten
   - Random User Generator API
 

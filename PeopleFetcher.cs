@@ -77,5 +77,9 @@ namespace CatWorx.BadgeMaker
 
             return employees;
         }
+        public static async Task<List<Employee>> GetEmployeesOrFromApi(bool fetchFromApi)
+        {
+            return fetchFromApi ? await GetFromApi() : GetEmployees();
+        }
     }
 }
