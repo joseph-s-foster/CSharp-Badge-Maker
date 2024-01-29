@@ -9,7 +9,7 @@ namespace CatWorx.BadgeMaker
 {
     class Util
     {
-        // Add List parameter to method
+
         public static void PrintEmployees(List<Employee> employees)
         {
             for (int i = 0; i < employees.Count; i++)
@@ -81,15 +81,11 @@ namespace CatWorx.BadgeMaker
                     paint.Typeface = SKTypeface.FromFamilyName("Arial");
 
                     canvas.DrawText(employees[i].GetCompanyName(), BADGE_WIDTH / 2f, COMPANY_NAME_Y, paint);
-
                     paint.Color = SKColors.Black;
 
-                    // Employee name
                     canvas.DrawText(employees[i].GetFullName(), BADGE_WIDTH / 2f, EMPLOYEE_NAME_Y, paint);
-
                     paint.Typeface = SKTypeface.FromFamilyName("Courier New");
 
-                    // Employee ID
                     canvas.DrawText(employees[i].GetId().ToString(), BADGE_WIDTH / 2f, EMPLOYEE_ID_Y, paint);
 
                     SKImage finalImage = SKImage.FromBitmap(badge);
