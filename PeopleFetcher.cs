@@ -44,33 +44,30 @@ namespace CatWorx.BadgeMaker
                     string response = await client.GetStringAsync("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
                     Console.WriteLine("API Response:");
 
-                    // Parse the entire JSON response into a JObject
                     JObject json = JObject.Parse(response);
 
-                    // Extract the array of people objects using SelectToken
                     JArray resultsArray = (JArray)json.SelectToken("results")!;
 
-                    // Check if the resultsArray is not null
                     if (resultsArray != null)
                     {
-                        // Iterate over each person object in the array
                         foreach (JToken personToken in resultsArray)
                         {
-                            // Extract the first name of the person and print it to the console
-                            string? firstName = personToken?.SelectToken("name.first")?.ToString();
+                            // Parse JSON data and create Employee objects
+                            Employee emp = new Employee
+                            (
+                                personToken?.SelectToken("name.first")?.ToString() ?? "",
+                                personToken?.SelectToken("name.last")?.ToString() ?? "",
+                                Int32.Parse(personToken?.SelectToken("id.value")?.ToString().Replace("-", "") ?? "0"),
+                                personToken?.SelectToken("picture.large")?.ToString() ?? ""
+                            );
 
-                            Console.WriteLine($"{firstName}");
-
-                            // You can add code here to create Employee objects using the extracted data
-                            // For now, we'll just print the first names to the console
+                            employees.Add(emp);
                         }
                     }
                     else
                     {
                         Console.WriteLine("No 'results' array found in the JSON response.");
                     }
-
-                    // The rest of your code to parse and create Employee objects goes here
                 }
                 catch (Exception ex)
                 {

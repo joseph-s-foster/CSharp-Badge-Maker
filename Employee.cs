@@ -30,7 +30,7 @@ namespace CatWorx.BadgeMaker
         }
         public string GetCompanyName()
         {
-            return "Paws and Reflect LLC";
+            return "Salient Solutions";
         }
     }
 }
