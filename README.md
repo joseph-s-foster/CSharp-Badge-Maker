@@ -27,7 +27,7 @@ A C# application that automatically (via API request) and manually (user input) 
   ## User Story
 
   - Objective:
-    As a user, I want to develop create employee badges that render the company name, employee first and last name, and employee ID number.
+    As a user, I want to create employee badges that render the company name, employee first and last name, and employee ID number.
 
   - Acceptance Criteria:
     This is done when the application performs as expected on Windows devices (See screenshot). 
