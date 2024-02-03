@@ -15,7 +15,7 @@ A C# application that automatically (via API request) and manually (user input) 
 
   ## Installation
 
-  - C# extension for CS Code
+  - C# extension for VS Code
   - .Net CORE SDK
   - SkiaSharp
   - NewtonSoft.Json
